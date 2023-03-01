@@ -31,7 +31,7 @@ export class FileuploadComponent implements OnInit{
     this.selectedFiles = event.target.files;
   }
 
-  uploadFiles()
+  uploadFile()
   {
     this.currentFileUpload = new FileMetaData(this.selectedFiles[0]);
     const path = 'Uploads/'+this.currentFileUpload.file.name;
@@ -53,7 +53,7 @@ export class FileuploadComponent implements OnInit{
 
     ).subscribe({ 
     next: (res : any)=>
-    this.percentage = (res.bytesTransferred * 100 / res.totalBytes),
+    {this.percentage = (res.bytesTransferred * 100 / res.totalBytes)},
     
     error : (err) =>
     { console.log ('Error Occured ')}
@@ -78,9 +78,7 @@ export class FileuploadComponent implements OnInit{
       { alert ('Error While fetching file meta data'); }
 
   })
-
-
-  }
+}
 
   deleteFile(file : FileMetaData)
   {
