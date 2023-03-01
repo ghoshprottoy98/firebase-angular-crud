@@ -11,6 +11,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { FileuploadComponent } from './components/fileupload/fileupload.component';
+
 
 @NgModule({
   declarations: [
@@ -19,14 +22,16 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     DashboardComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FormsModule
+    FormsModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
