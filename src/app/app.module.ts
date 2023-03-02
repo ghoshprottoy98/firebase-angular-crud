@@ -14,7 +14,6 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FileuploadComponent } from './components/fileupload/fileupload.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

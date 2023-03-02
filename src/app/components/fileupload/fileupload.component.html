@@ -1,9 +1,5 @@
 
-<div class="header">
-<a href="http://localhost:4200/dashboard">
-    <button class="btn btn-primary btn-lg">Dashboard</button>
-    </a>
-</div>
+
 
 <div class="container-fluid">
     <div class="row">
@@ -13,8 +9,8 @@
             <div class="card border-0 shadow">
                 <div class="card-body">x
                     <div>
-                        <input type="file" class="text=nowrap text truncate file" (chnage)="selectFile($event)">
-                        <button type="button" class="btn btn-outline-warning" (click)="uploadFile()">Upload</button>
+                        <input type="file" class="text=nowrap text truncate file" (change)="selectFile($event)">
+                        <button type="button" class="btn btn-outline-warning" [disabled]="!selectedFiles" (click)="uploadFile()">Upload</button>
                     </div>
 
                     <div class="progress mt-2">
@@ -46,7 +42,7 @@
     <tbody>
         <tr *ngFor="let file of listoffiles">
             <th>{{file.name}}</th>
-            <td>{{file.size}}</td>
+            <td>{{file.size}} bytes </td>
             <td>
                 <a href="{{file.url}}" class="btn btn-outline-info" type="button" download>Download</a>
                 <a class="btn btn-outline-danger ms-2" type="button" (click)="deleteFile(file)">Delete</a>
@@ -57,3 +53,12 @@
     </div>
    </div>
 </div>
+
+
+<div class="container">
+    <div class="vertical-center">
+    <a href="http://localhost:4200/dashboard">
+        <button class="btn btn-primary btn-lg"> Return to Dashboard</button>
+        </a>
+    </div>
+    </div>

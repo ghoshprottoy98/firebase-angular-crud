@@ -15,7 +15,7 @@ export class FileuploadComponent implements OnInit{
   
   selectedFiles !: FileList;
   currentFileUpload !: FileMetaData;
-  percentage: number = 0;
+  percentage: number =0;
 
   listoffiles : FileMetaData[] = [];
 
@@ -61,6 +61,7 @@ export class FileuploadComponent implements OnInit{
     });
   
   }
+  
 
 
   getAllFiles(){

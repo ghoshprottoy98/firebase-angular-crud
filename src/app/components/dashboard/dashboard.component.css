@@ -1,6 +1,19 @@
-.header{
+.mb-3{
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
+.container {
+    height: 200px;
+    position: relative;
+    
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
